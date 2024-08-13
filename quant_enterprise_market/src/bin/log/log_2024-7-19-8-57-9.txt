@@ -1,0 +1,29 @@
+[2024-07-19 08:57:09.200] [in] [info] Start CTcpServer 
+[2024-07-19 08:57:09.200] [in] [info] Start CMsgQueueServer 
+[2024-07-19 08:57:09.200] [in] [info] Start CSaveData 
+[2024-07-19 08:57:09.200] [in] [info] start tcp server,port=[5882]
+[2024-07-19 08:57:12.331] [in] [info] ---- ctp MdAdapterCtp  OnFrontConnected ----
+[2024-07-19 08:57:12.331] [in] [info] send ctp MdAdapterCtp  ReqUserLogin OK
+[2024-07-19 08:57:12.369] [in] [info] ctp MdAdapterCtp OnRspUserLogin success
+[2024-07-19 08:57:12.402] [in] [info] ctp ReqSubscribeMarketdata
+[2024-07-19 08:57:12.402] [in] [info] send ctp SubscribeMarketData OK
+[2024-07-19 08:59:09.510] [in] [info] accept new client end,iConnFd=[12]
+[2024-07-19 08:59:12.510] [in] [info] 收到订阅请求,订阅的股票代码:
+[2024-07-19 08:59:12.510] [in] [info] szStockCode=[cu2408]
+[2024-07-19 08:59:12.510] [in] [debug] CreateWriteQueue
+[2024-07-19 08:59:12.588] [in] [debug] create szStockCode=[cu2408] sub list
+[2024-07-19 08:59:12.588] [in] [debug] add iClientNum=[8001] to szStockCode=[cu2408] sub list
+[2024-07-19 08:59:12.588] [in] [info] CreateWriteQueue OK,iWriteKey=[8001],iClientNum=[8001]
+[2024-07-19 15:43:04.253] [in] [error] ---- ctp MdAdapterCtp  OnFrontDisconnected ----,nReason=[4097]  <md_adapter_ctp.cpp> <OnFrontDisconnected> <162>
+[2024-07-19 20:14:18.381] [in] [info] ---- ctp MdAdapterCtp  OnFrontConnected ----
+[2024-07-19 20:14:18.381] [in] [info] send ctp MdAdapterCtp  ReqUserLogin OK
+[2024-07-19 20:14:18.418] [in] [info] ctp MdAdapterCtp OnRspUserLogin success
+[2024-07-19 20:14:18.429] [in] [info] ctp ReqSubscribeMarketdata
+[2024-07-19 20:14:18.429] [in] [info] send ctp SubscribeMarketData OK
+[2024-07-19 20:15:25.257] [in] [error] ---- ctp MdAdapterCtp  OnFrontDisconnected ----,nReason=[4097]  <md_adapter_ctp.cpp> <OnFrontDisconnected> <162>
+[2024-07-19 20:15:25.396] [in] [info] ---- ctp MdAdapterCtp  OnFrontConnected ----
+[2024-07-19 20:15:25.396] [in] [info] send ctp MdAdapterCtp  ReqUserLogin OK
+[2024-07-19 20:15:25.433] [in] [info] ctp MdAdapterCtp OnRspUserLogin success
+[2024-07-19 20:15:25.444] [in] [info] ctp ReqSubscribeMarketdata
+[2024-07-19 20:15:25.444] [in] [info] send ctp SubscribeMarketData OK
+[2024-07-19 20:23:11.765] [in] [error] ---- ctp MdAdapterCtp  OnFrontDisconnected ----,nReason=[4097]  <md_adapter_ctp.cpp> <OnFrontDisconnected> <162>

@@ -1,0 +1,67 @@
+[
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/StdFrame.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/StdFrame.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/StdFrame.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/config.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/config.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/config.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/main_impl.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/main_impl.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/main_impl.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/md_adapter_ctp.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/md_adapter_ctp.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/md_adapter_ctp.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/mem_pool_mng.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/mem_pool_mng.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/mem_pool_mng.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/memory_pool.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/memory_pool.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/memory_pool.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/msg_queue_server.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/msg_queue_server.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/msg_queue_server.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/save_data.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/save_data.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/save_data.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/sim_log.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/sim_log.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/sim_log.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/tcp_server.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/tcp_server.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/tcp_server.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/thread_group.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/thread_group.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/thread_group.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/thread_queue.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/thread_queue.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/thread_queue.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/spdlog-1.x/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/ctp/linux64/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/../../other_depend/sqlite/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantMarketServer.dir/trade_data.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/trade_data.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_market/src/trade_data.cpp"
+}
+]

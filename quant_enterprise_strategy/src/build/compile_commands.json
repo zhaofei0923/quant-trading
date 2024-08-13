@@ -1,0 +1,67 @@
+[
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/StdFrame.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/StdFrame.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/StdFrame.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/callback.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/callback.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/callback.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/config.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/config.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/config.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/main_impl.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/main_impl.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/main_impl.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/mem_pool_mng.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/mem_pool_mng.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/mem_pool_mng.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/memory_pool.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/memory_pool.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/memory_pool.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/msg_queue_md.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/msg_queue_md.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/msg_queue_md.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/msg_queue_td.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/msg_queue_td.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/msg_queue_td.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/sim_log.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/sim_log.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/sim_log.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/strategy.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/strategy.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/strategy.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/tcp_client.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/tcp_client.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/tcp_client.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/thread_group.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/thread_group.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/thread_group.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantStrategyClient.dir/thread_queue.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/thread_queue.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/thread_queue.cpp"
+}
+]

@@ -1,0 +1,10 @@
+[2024-01-12 08:57:10.682] [in] [info] Start CTcpServer 
+[2024-01-12 08:57:10.682] [in] [info] Start CMsgQueueServer 
+[2024-01-12 08:57:10.683] [in] [info] Start CSaveData 
+[2024-01-12 08:57:10.683] [in] [error] bind port error  <tcp_server.cpp> <CreateSocket> <177>
+[2024-01-12 08:57:10.683] [in] [info] start tcp server,port=[5882]
+[2024-01-12 08:57:13.788] [in] [info] ---- ctp MdAdapterCtp  OnFrontConnected ----
+[2024-01-12 08:57:13.788] [in] [info] send ctp MdAdapterCtp  ReqUserLogin OK
+[2024-01-12 08:57:13.820] [in] [info] ctp MdAdapterCtp OnRspUserLogin success
+[2024-01-12 08:57:13.836] [in] [info] ctp ReqSubscribeMarketdata
+[2024-01-12 08:57:13.836] [in] [info] send ctp SubscribeMarketData OK

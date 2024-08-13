@@ -1,0 +1,106 @@
+[2024-01-10 09:02:10.090] [in] [debug] --------ConfigData------------
+[2024-01-10 09:02:10.090] [in] [info] LogCfgData.iLoglevel: 0
+[2024-01-10 09:02:10.090] [in] [info] CtpCfgData.szTradeIp: 218.202.237.33
+[2024-01-10 09:02:10.090] [in] [info] CtpCfgData.iTradePort: 10203
+[2024-01-10 09:02:10.090] [in] [info] CtpCfgData.szMarketIp: 218.202.237.33
+[2024-01-10 09:02:10.090] [in] [info] CtpCfgData.iMarketPort: 10213
+[2024-01-10 09:02:10.090] [in] [info] CtpCfgData.szBrokerId: 9999
+[2024-01-10 09:02:10.090] [in] [info] CtpCfgData.szUser: 191202
+[2024-01-10 09:02:10.090] [in] [info] CtpCfgData.szPassword: zhaoFEI1981*
+[2024-01-10 09:02:10.090] [in] [info] CtpCfgData.szAuthCode: 0000000000000000
+[2024-01-10 09:02:10.090] [in] [info] CtpCfgData.szAppID: simnow_client_test
+[2024-01-10 09:02:10.090] [in] [info] TcpCfgData.iPort: 5881
+[2024-01-10 09:02:10.090] [in] [info] szDataBase: /home/kevinzhao/quant/quant_enterprise/database/quant.db
+[2024-01-10 09:02:10.090] [in] [info] UserInfo.iRoletype: 1
+[2024-01-10 09:02:10.090] [in] [info] UserInfo.szUserId: admin
+[2024-01-10 09:02:10.090] [in] [info] UserInfo.szPassword: 123
+[2024-01-10 09:02:10.090] [in] [info] UserInfo.iRoletype: 0
+[2024-01-10 09:02:10.090] [in] [info] UserInfo.szUserId: 101
+[2024-01-10 09:02:10.090] [in] [info] UserInfo.szPassword: 123
+[2024-01-10 09:02:10.091] [in] [info] ´´½¨RuntimeManager,  m_szUserId=[101]
+[2024-01-10 09:02:10.091] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØ×Ê½ð,m_szUserId=[101]
+[2024-01-10 09:02:10.091] [in] [debug] --------BalanceData------------
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.szUserId=[101]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.dUseMargin=[47831.2]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.dFrozenMargin=[0]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.dFrozenCash=[0]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.dFrozenCommission=[0]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.dCurrMargin=[47831.2]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.dCommission=[10]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.dAvailable=[19945918.8]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.dStartMoney=[20000000]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.dAddMoney=[-6240]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.iModifyDate=[20240109]
+[2024-01-10 09:02:10.091] [in] [debug] BalanceData.iModifyTime=[85417]
+[2024-01-10 09:02:10.091] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØµ±ÌìÎ¯ÍÐ,m_szUserId=[101]
+[2024-01-10 09:02:10.091] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØµ±Ìì³É½»,m_szUserId=[101]
+[2024-01-10 09:02:10.091] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØµ±ÌìÊÖÐø·Ñ¿ª²ÖÊýÁ¿,m_szUserId=[101]
+[2024-01-10 09:02:10.092] [in] [info] ÐÝÃß3Ãë£¬µÈ´ýctpÁ¬½Ó·þÎñÆ÷
+[2024-01-10 09:02:13.092] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:16.092] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:19.092] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:22.092] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:25.093] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:28.093] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:31.093] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:34.093] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:37.094] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:40.094] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:43.094] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:46.094] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:49.094] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:52.094] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:55.094] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:02:58.095] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:01.095] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:04.095] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:07.095] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:10.095] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:13.095] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:16.096] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:19.096] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:22.096] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:25.096] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:28.096] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:31.096] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:34.097] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:37.097] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:40.097] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:43.097] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:46.097] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:49.097] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:52.098] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:55.098] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:58.098] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:01.098] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:04.098] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:07.099] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:10.099] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:13.101] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:16.102] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:19.107] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:22.112] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:25.113] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:28.114] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:31.115] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:34.116] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:37.118] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:40.120] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:43.122] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:46.124] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:49.126] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:52.128] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:55.129] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:04:58.129] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:01.130] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:04.132] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:07.133] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:10.136] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:13.138] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:16.139] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:19.141] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:22.144] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:25.145] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:28.150] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:31.158] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:05:34.161] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>

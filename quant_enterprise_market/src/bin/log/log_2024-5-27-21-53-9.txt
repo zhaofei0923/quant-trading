@@ -1,0 +1,19 @@
+[2024-05-27 21:53:09.694] [in] [info] Start CTcpServer 
+[2024-05-27 21:53:09.694] [in] [info] Start CMsgQueueServer 
+[2024-05-27 21:53:09.694] [in] [info] Start CSaveData 
+[2024-05-27 21:53:09.694] [in] [info] start tcp server,port=[5882]
+[2024-05-27 21:53:12.996] [in] [info] ---- ctp MdAdapterCtp  OnFrontConnected ----
+[2024-05-27 21:53:12.996] [in] [info] send ctp MdAdapterCtp  ReqUserLogin OK
+[2024-05-27 21:53:13.103] [in] [info] ctp MdAdapterCtp OnRspUserLogin success
+[2024-05-27 21:53:13.142] [in] [info] ctp ReqSubscribeMarketdata
+[2024-05-27 21:53:13.143] [in] [info] send ctp SubscribeMarketData OK
+[2024-05-27 21:53:50.855] [in] [info] accept new client end,iConnFd=[12]
+[2024-05-27 21:53:53.855] [in] [info] 收到订阅请求,订阅的股票代码:
+[2024-05-27 21:53:53.856] [in] [info] szStockCode=[p2405]
+[2024-05-27 21:53:53.856] [in] [info] szStockCode=[cu2402]
+[2024-05-27 21:53:53.856] [in] [debug] CreateWriteQueue
+[2024-05-27 21:53:53.941] [in] [debug] create szStockCode=[p2405] sub list
+[2024-05-27 21:53:53.941] [in] [debug] add iClientNum=[8001] to szStockCode=[p2405] sub list
+[2024-05-27 21:53:53.941] [in] [debug] create szStockCode=[cu2402] sub list
+[2024-05-27 21:53:53.941] [in] [debug] add iClientNum=[8001] to szStockCode=[cu2402] sub list
+[2024-05-27 21:53:53.941] [in] [info] CreateWriteQueue OK,iWriteKey=[8001],iClientNum=[8001]

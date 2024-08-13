@@ -1,0 +1,43 @@
+[2024-01-10 09:02:54.782] [in] [debug] --------ConfigData------------
+[2024-01-10 09:02:54.782] [in] [info] LogCfgData.iLoglevel: 0
+[2024-01-10 09:02:54.782] [in] [info] CtpCfgData.szTradeIp: 218.202.237.33
+[2024-01-10 09:02:54.782] [in] [info] CtpCfgData.iTradePort: 10203
+[2024-01-10 09:02:54.782] [in] [info] CtpCfgData.szMarketIp: 218.202.237.33
+[2024-01-10 09:02:54.782] [in] [info] CtpCfgData.iMarketPort: 10213
+[2024-01-10 09:02:54.782] [in] [info] CtpCfgData.szBrokerId: 9999
+[2024-01-10 09:02:54.782] [in] [info] CtpCfgData.szUser: 191202
+[2024-01-10 09:02:54.782] [in] [info] CtpCfgData.szPassword: zhaoFEI1981*
+[2024-01-10 09:02:54.782] [in] [info] CtpCfgData.szAuthCode: 0000000000000000
+[2024-01-10 09:02:54.782] [in] [info] CtpCfgData.szAppID: simnow_client_test
+[2024-01-10 09:02:54.782] [in] [info] TcpCfgData.iPort: 5881
+[2024-01-10 09:02:54.782] [in] [info] szDataBase: /home/kevinzhao/quant/quant_enterprise/database/quant.db
+[2024-01-10 09:02:54.782] [in] [info] UserInfo.iRoletype: 1
+[2024-01-10 09:02:54.782] [in] [info] UserInfo.szUserId: admin
+[2024-01-10 09:02:54.782] [in] [info] UserInfo.szPassword: 123
+[2024-01-10 09:02:54.782] [in] [info] UserInfo.iRoletype: 0
+[2024-01-10 09:02:54.782] [in] [info] UserInfo.szUserId: 101
+[2024-01-10 09:02:54.782] [in] [info] UserInfo.szPassword: 123
+[2024-01-10 09:02:54.783] [in] [info] 创建RuntimeManager,  m_szUserId=[101]
+[2024-01-10 09:02:54.783] [in] [debug] 从数据表加载资金,m_szUserId=[101]
+[2024-01-10 09:02:54.783] [in] [debug] --------BalanceData------------
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.szUserId=[101]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.dUseMargin=[47831.2]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.dFrozenMargin=[0]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.dFrozenCash=[0]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.dFrozenCommission=[0]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.dCurrMargin=[47831.2]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.dCommission=[10]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.dAvailable=[19945918.8]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.dStartMoney=[20000000]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.dAddMoney=[-6240]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.iModifyDate=[20240109]
+[2024-01-10 09:02:54.783] [in] [debug] BalanceData.iModifyTime=[85417]
+[2024-01-10 09:02:54.783] [in] [debug] 从数据表加载当天委托,m_szUserId=[101]
+[2024-01-10 09:02:54.783] [in] [debug] 从数据表加载当天成交,m_szUserId=[101]
+[2024-01-10 09:02:54.783] [in] [debug] 从数据表加载当天手续费开仓数量,m_szUserId=[101]
+[2024-01-10 09:02:54.784] [in] [info] 休眠3秒，等待ctp连接服务器
+[2024-01-10 09:02:57.784] [in] [error] ctp登录失败  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:00.784] [in] [error] ctp登录失败  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:03.784] [in] [error] ctp登录失败  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:06.784] [in] [error] ctp登录失败  <execute_engine.cpp> <Start> <117>
+[2024-01-10 09:03:09.784] [in] [error] ctp登录失败  <execute_engine.cpp> <Start> <117>

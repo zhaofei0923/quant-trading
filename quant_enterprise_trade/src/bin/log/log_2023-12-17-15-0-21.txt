@@ -1,0 +1,55 @@
+[2023-12-17 15:00:21.418] [in] [debug] --------ConfigData------------
+[2023-12-17 15:00:21.418] [in] [info] LogCfgData.iLoglevel: 0
+[2023-12-17 15:00:21.418] [in] [info] CtpCfgData.szTradeIp: 180.168.146.187
+[2023-12-17 15:00:21.418] [in] [info] CtpCfgData.iTradePort: 10130
+[2023-12-17 15:00:21.418] [in] [info] CtpCfgData.szMarketIp: 180.168.146.187
+[2023-12-17 15:00:21.418] [in] [info] CtpCfgData.iMarketPort: 10131
+[2023-12-17 15:00:21.418] [in] [info] CtpCfgData.szBrokerId: 9999
+[2023-12-17 15:00:21.418] [in] [info] CtpCfgData.szUser: 191202
+[2023-12-17 15:00:21.418] [in] [info] CtpCfgData.szPassword: zhaoFEI1981*
+[2023-12-17 15:00:21.418] [in] [info] CtpCfgData.szAuthCode: 0000000000000000
+[2023-12-17 15:00:21.418] [in] [info] CtpCfgData.szAppID: simnow_client_test
+[2023-12-17 15:00:21.418] [in] [info] TcpCfgData.iPort: 5881
+[2023-12-17 15:00:21.418] [in] [info] szDataBase: /home/kevinzhao/quant/quant_enterprise/database/quant.db
+[2023-12-17 15:00:21.418] [in] [info] UserInfo.iRoletype: 1
+[2023-12-17 15:00:21.418] [in] [info] UserInfo.szUserId: admin
+[2023-12-17 15:00:21.418] [in] [info] UserInfo.szPassword: 123
+[2023-12-17 15:00:21.418] [in] [info] UserInfo.iRoletype: 0
+[2023-12-17 15:00:21.418] [in] [info] UserInfo.szUserId: 101
+[2023-12-17 15:00:21.418] [in] [info] UserInfo.szPassword: 123
+[2023-12-17 15:00:21.420] [in] [info] ´´½¨RuntimeManager,  m_szUserId=[101]
+[2023-12-17 15:00:21.420] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØ×Ê½ð,m_szUserId=[101]
+[2023-12-17 15:00:21.420] [in] [debug] --------BalanceData------------
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.szUserId=[101]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.dUseMargin=[0]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.dFrozenMargin=[0]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.dFrozenCash=[0]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.dFrozenCommission=[0]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.dCurrMargin=[0]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.dCommission=[0]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.dAvailable=[20000000]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.dStartMoney=[20000000]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.dAddMoney=[0]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.iModifyDate=[20211110]
+[2023-12-17 15:00:21.420] [in] [debug] BalanceData.iModifyTime=[105150]
+[2023-12-17 15:00:21.420] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØµ±ÌìÎ¯ÍÐ,m_szUserId=[101]
+[2023-12-17 15:00:21.421] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØµ±Ìì³É½»,m_szUserId=[101]
+[2023-12-17 15:00:21.421] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØµ±ÌìÊÖÐø·Ñ¿ª²ÖÊýÁ¿,m_szUserId=[101]
+[2023-12-17 15:00:21.422] [in] [info] ÐÝÃß3Ãë£¬µÈ´ýctpÁ¬½Ó·þÎñÆ÷
+[2023-12-17 15:00:24.422] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:27.422] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:30.422] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:33.422] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:36.422] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:39.423] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:42.423] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:45.423] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:48.423] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:51.423] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:54.423] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:00:57.424] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:01:00.424] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:01:03.424] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:01:06.424] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:01:09.424] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2023-12-17 15:01:12.424] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>

@@ -1,0 +1,40 @@
+[2024-01-02 10:06:25.540] [in] [info] Start CTcpServer 
+[2024-01-02 10:06:25.540] [in] [info] Start CMsgQueueServer 
+[2024-01-02 10:06:25.540] [in] [info] Start CSaveData 
+[2024-01-02 10:06:25.540] [in] [info] start tcp server,port=[5882]
+[2024-01-02 10:06:28.654] [in] [info] ---- ctp MdAdapterCtp  OnFrontConnected ----
+[2024-01-02 10:06:28.654] [in] [info] send ctp MdAdapterCtp  ReqUserLogin OK
+[2024-01-02 10:06:28.694] [in] [info] ctp MdAdapterCtp OnRspUserLogin success
+[2024-01-02 10:06:28.710] [in] [info] ctp ReqSubscribeMarketdata
+[2024-01-02 10:06:28.710] [in] [info] send ctp SubscribeMarketData OK
+[2024-01-02 10:37:20.411] [in] [info] accept new client end,iConnFd=[12]
+[2024-01-02 10:37:23.411] [in] [info] 收到订阅请求,订阅的股票代码:
+[2024-01-02 10:37:23.411] [in] [info] szStockCode=[p2405]
+[2024-01-02 10:37:23.411] [in] [debug] CreateWriteQueue
+[2024-01-02 10:37:23.482] [in] [debug] create szStockCode=[p2405] sub list
+[2024-01-02 10:37:23.482] [in] [debug] add iClientNum=[8001] to szStockCode=[p2405] sub list
+[2024-01-02 10:37:23.482] [in] [info] CreateWriteQueue OK,iWriteKey=[8001],iClientNum=[8001]
+[2024-01-02 10:39:02.285] [in] [info] client close,iConnFd=[12]
+[2024-01-02 10:39:02.285] [in] [debug] DelWriteQueue,iClientNum=[8001]
+[2024-01-02 10:39:02.285] [in] [info] DelWriteQueue OK,iClientNum=[8001]
+[2024-01-02 11:01:23.651] [in] [info] accept new client end,iConnFd=[12]
+[2024-01-02 11:01:26.652] [in] [info] 收到订阅请求,订阅的股票代码:
+[2024-01-02 11:01:26.652] [in] [info] szStockCode=[p2405]
+[2024-01-02 11:01:26.652] [in] [debug] CreateWriteQueue
+[2024-01-02 11:01:26.722] [in] [debug] add iClientNum=[8002] to szStockCode=[p2405] sub list
+[2024-01-02 11:01:26.722] [in] [info] CreateWriteQueue OK,iWriteKey=[8002],iClientNum=[8002]
+[2024-01-02 11:03:18.030] [in] [info] client close,iConnFd=[12]
+[2024-01-02 11:03:18.030] [in] [debug] DelWriteQueue,iClientNum=[8002]
+[2024-01-02 11:03:18.030] [in] [info] DelWriteQueue OK,iClientNum=[8002]
+[2024-01-02 11:09:22.467] [in] [info] accept new client end,iConnFd=[12]
+[2024-01-02 11:09:25.468] [in] [info] 收到订阅请求,订阅的股票代码:
+[2024-01-02 11:09:25.468] [in] [info] szStockCode=[p2405]
+[2024-01-02 11:09:25.468] [in] [info] szStockCode=[cu2402]
+[2024-01-02 11:09:25.468] [in] [debug] CreateWriteQueue
+[2024-01-02 11:09:25.540] [in] [debug] add iClientNum=[8003] to szStockCode=[p2405] sub list
+[2024-01-02 11:09:25.541] [in] [debug] create szStockCode=[cu2402] sub list
+[2024-01-02 11:09:25.541] [in] [debug] add iClientNum=[8003] to szStockCode=[cu2402] sub list
+[2024-01-02 11:09:25.541] [in] [info] CreateWriteQueue OK,iWriteKey=[8003],iClientNum=[8003]
+[2024-01-02 11:10:06.517] [in] [info] client close,iConnFd=[12]
+[2024-01-02 11:10:06.517] [in] [debug] DelWriteQueue,iClientNum=[8003]
+[2024-01-02 11:10:06.517] [in] [info] DelWriteQueue OK,iClientNum=[8003]

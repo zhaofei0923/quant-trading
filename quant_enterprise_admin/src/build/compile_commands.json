@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantAdminClient.dir/StdFrame.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/StdFrame.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/StdFrame.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantAdminClient.dir/callback.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/callback.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/callback.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantAdminClient.dir/config.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/config.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/config.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantAdminClient.dir/main_impl.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/main_impl.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/main_impl.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantAdminClient.dir/sim_log.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/sim_log.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/sim_log.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantAdminClient.dir/tcp_client.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/tcp_client.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/tcp_client.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantAdminClient.dir/thread_group.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/thread_group.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/thread_group.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantAdminClient.dir/thread_queue.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/thread_queue.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_admin/src/thread_queue.cpp"
+}
+]
