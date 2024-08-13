@@ -1,0 +1,3 @@
+/home/kevinzhao/quant/quant_enterprise/quant_enterprise_trade/src/CMakeFiles/QuantTradeServer.dir
+/home/kevinzhao/quant/quant_enterprise/quant_enterprise_trade/src/CMakeFiles/edit_cache.dir
+/home/kevinzhao/quant/quant_enterprise/quant_enterprise_trade/src/CMakeFiles/rebuild_cache.dir

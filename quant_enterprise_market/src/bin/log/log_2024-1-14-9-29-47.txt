@@ -1,0 +1,12 @@
+[2024-01-14 09:29:47.020] [in] [info] Start CTcpServer 
+[2024-01-14 09:29:47.021] [in] [info] Start CMsgQueueServer 
+[2024-01-14 09:29:47.021] [in] [info] Start CSaveData 
+[2024-01-14 09:29:47.021] [in] [info] start tcp server,port=[5882]
+[2024-01-14 09:29:50.128] [in] [info] ---- ctp MdAdapterCtp  OnFrontConnected ----
+[2024-01-14 09:29:50.128] [in] [info] send ctp MdAdapterCtp  ReqUserLogin OK
+[2024-01-14 09:29:50.162] [in] [info] ctp MdAdapterCtp OnRspUserLogin success
+[2024-01-14 09:29:50.195] [in] [info] ctp ReqSubscribeMarketdata
+[2024-01-14 09:29:50.195] [in] [info] send ctp SubscribeMarketData OK
+[2024-01-14 09:40:04.640] [in] [info] accept new client end,iConnFd=[12]
+[2024-01-14 09:45:08.799] [in] [info] client close,iConnFd=[12]
+[2024-01-14 12:50:54.619] [in] [error] ---- ctp MdAdapterCtp  OnFrontDisconnected ----,nReason=[4097]  <md_adapter_ctp.cpp> <OnFrontDisconnected> <162>

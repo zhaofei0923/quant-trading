@@ -1,0 +1,25 @@
+{
+    "Log": {
+        "#LogLevel": "0-TRACE,1-DEBUG,2-INFO,3-WARN,4-ERROR,5-CRITICAL,6-OFF",
+        "LogLevel": 0
+    },
+    "Ctp": {
+        "TradeIp": "218.202.237.33",
+        "TradePort": 10203,
+        "MarketIp": "218.202.237.33",
+        "MarketPort": 10213,
+        "#TradeIp": "180.168.146.187",
+        "#TradePort": 10130,
+        "#MarketIp": "180.168.146.187",
+        "#MarketPort": 10131,
+        "BrokerId": "9999",
+        "User": "191202",
+        "Password": "zhaoFEI2024*",
+        "AuthCode": "0000000000000000",
+        "AppID": "simnow_client_test"
+    },
+    "TcpSvr": {
+        "Port": 5882
+    },
+    "database": "/home/kevinzhao/quant/quant_enterprise/database/quant.db"
+}

@@ -1,0 +1,68 @@
+[2024-08-12 16:31:21.656] [in] [debug] --------ConfigData------------
+[2024-08-12 16:31:21.656] [in] [info] LogCfgData.iLoglevel: 0
+[2024-08-12 16:31:21.656] [in] [info] CtpCfgData.szTradeIp: 218.202.237.33
+[2024-08-12 16:31:21.656] [in] [info] CtpCfgData.iTradePort: 10203
+[2024-08-12 16:31:21.656] [in] [info] CtpCfgData.szMarketIp: 218.202.237.33
+[2024-08-12 16:31:21.656] [in] [info] CtpCfgData.iMarketPort: 10213
+[2024-08-12 16:31:21.656] [in] [info] CtpCfgData.szBrokerId: 9999
+[2024-08-12 16:31:21.656] [in] [info] CtpCfgData.szUser: 191202
+[2024-08-12 16:31:21.656] [in] [info] CtpCfgData.szPassword: zhaoFEI2024*
+[2024-08-12 16:31:21.656] [in] [info] CtpCfgData.szAuthCode: 0000000000000000
+[2024-08-12 16:31:21.656] [in] [info] CtpCfgData.szAppID: simnow_client_test
+[2024-08-12 16:31:21.656] [in] [info] TcpCfgData.iPort: 5881
+[2024-08-12 16:31:21.656] [in] [info] szDataBase: /home/kevinzhao/quant/quant_enterprise/database/quant.db
+[2024-08-12 16:31:21.656] [in] [info] UserInfo.iRoletype: 1
+[2024-08-12 16:31:21.656] [in] [info] UserInfo.szUserId: admin
+[2024-08-12 16:31:21.656] [in] [info] UserInfo.szPassword: 123
+[2024-08-12 16:31:21.656] [in] [info] UserInfo.iRoletype: 0
+[2024-08-12 16:31:21.656] [in] [info] UserInfo.szUserId: 101
+[2024-08-12 16:31:21.656] [in] [info] UserInfo.szPassword: 123
+[2024-08-12 16:31:21.657] [in] [info] ´´½¨RuntimeManager,  m_szUserId=[101]
+[2024-08-12 16:31:21.657] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØ×Ê½ð,m_szUserId=[101]
+[2024-08-12 16:31:21.657] [in] [debug] --------BalanceData------------
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.szUserId=[101]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.dUseMargin=[52618.4]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.dFrozenMargin=[0]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.dFrozenCash=[0]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.dFrozenCommission=[0]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.dCurrMargin=[52618.4]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.dCommission=[10]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.dAvailable=[19969291.6]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.dStartMoney=[20000000]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.dAddMoney=[21920]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.iModifyDate=[20240729]
+[2024-08-12 16:31:21.657] [in] [debug] BalanceData.iModifyTime=[133902]
+[2024-08-12 16:31:21.657] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØµ±ÌìÎ¯ÍÐ,m_szUserId=[101]
+[2024-08-12 16:31:21.657] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØµ±Ìì³É½»,m_szUserId=[101]
+[2024-08-12 16:31:21.657] [in] [debug] ´ÓÊý¾Ý±í¼ÓÔØµ±ÌìÊÖÐø·Ñ¿ª²ÖÊýÁ¿,m_szUserId=[101]
+[2024-08-12 16:31:21.658] [in] [info] ÐÝÃß3Ãë£¬µÈ´ýctpÁ¬½Ó·þÎñÆ÷
+[2024-08-12 16:31:24.658] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:27.658] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:30.658] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:33.659] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:36.659] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:39.659] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:42.659] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:45.659] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:48.660] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:51.660] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:54.660] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:31:57.660] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:00.661] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:03.661] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:06.661] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:09.661] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:12.661] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:15.662] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:18.662] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:21.662] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:24.662] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:27.662] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:30.663] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:33.663] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:36.663] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:39.663] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:42.663] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:45.664] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:48.664] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>
+[2024-08-12 16:32:51.664] [in] [error] ctpµÇÂ¼Ê§°Ü  <execute_engine.cpp> <Start> <117>

@@ -1,0 +1,40 @@
+{
+    "Log": {
+        "#LogLevel": "0-TRACE,1-DEBUG,2-INFO,3-WARN,4-ERROR,5-CRITICAL,6-OFF",
+        "LogLevel": 0
+    },
+    "Ctp": {
+        "TradeIp": "218.202.237.33",
+        "TradePort": 10203,
+        "MarketIp": "218.202.237.33",
+        "MarketPort": 10213,
+        "#TradeIp": "180.168.146.187",
+        "#TradePort": 10130,
+        "#MarketIp": "180.168.146.187",
+        "#MarketPort": 10131,
+        "BrokerId": "9999",
+        "User": "191202",
+        "Password": "zhaoFEI2024*",
+        "AuthCode": "0000000000000000",
+        "AppID": "simnow_client_test"
+    },
+    "TcpSvr": {
+        "Port": 5881
+    },
+    "Users": [
+        {
+            "#Role": "0-交易员 1-管理员",
+            "Role": 0,
+            "#UserId": "交易员:首位非0的3位数字",
+            "UserId": "101",
+            "Password": "123"
+        },
+        {
+            "Role": 1,
+            "#UserId": "管理员:无限制",
+            "UserId": "admin",
+            "Password": "123"
+        }
+    ],
+    "database": "/home/kevinzhao/quant/quant_enterprise/database/quant.db"
+}

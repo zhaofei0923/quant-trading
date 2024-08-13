@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantTradeClient.dir/StdFrame.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/StdFrame.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/StdFrame.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantTradeClient.dir/callback.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/callback.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/callback.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantTradeClient.dir/config.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/config.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/config.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantTradeClient.dir/main_impl.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/main_impl.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/main_impl.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantTradeClient.dir/msg_queue_md.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/msg_queue_md.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/msg_queue_md.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantTradeClient.dir/msg_queue_td.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/msg_queue_td.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/msg_queue_td.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantTradeClient.dir/sim_log.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/sim_log.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/sim_log.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantTradeClient.dir/tcp_client.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/tcp_client.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/tcp_client.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantTradeClient.dir/thread_group.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/thread_group.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/thread_group.cpp"
+},
+{
+  "directory": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/build",
+  "command": "/usr/bin/c++  -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/rapidjson-master/include -I/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/../../other_depend/spdlog-1.x/include -std=c++11 -O3 -g -g -O2 -std=c++11 -o CMakeFiles/QuantTradeClient.dir/thread_queue.cpp.o -c /home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/thread_queue.cpp",
+  "file": "/home/kevinzhao/quant/quant_enterprise/quant_enterprise_client/src/thread_queue.cpp"
+}
+]

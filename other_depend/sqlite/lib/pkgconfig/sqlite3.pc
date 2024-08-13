@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/home/kevinzhao/quant/quant_enterprise/other_depend/sqlite
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: SQLite
+Description: SQL database engine
+Version: 3.11.0
+Libs: -L${libdir} -lsqlite3
+Libs.private: 
+Cflags: -I${includedir}

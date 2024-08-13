@@ -1,0 +1,31 @@
+[2024-05-28 21:25:48.194] [in] [info] Start CTcpServer 
+[2024-05-28 21:25:48.194] [in] [info] Start CMsgQueueServer 
+[2024-05-28 21:25:48.194] [in] [info] Start CSaveData 
+[2024-05-28 21:25:48.194] [in] [info] start tcp server,port=[5882]
+[2024-05-28 21:25:51.465] [in] [info] ---- ctp MdAdapterCtp  OnFrontConnected ----
+[2024-05-28 21:25:51.465] [in] [info] send ctp MdAdapterCtp  ReqUserLogin OK
+[2024-05-28 21:25:51.541] [in] [info] ctp MdAdapterCtp OnRspUserLogin success
+[2024-05-28 21:25:51.557] [in] [info] ctp ReqSubscribeMarketdata
+[2024-05-28 21:25:51.557] [in] [info] send ctp SubscribeMarketData OK
+[2024-05-28 21:27:18.765] [in] [info] accept new client end,iConnFd=[12]
+[2024-05-28 21:27:21.766] [in] [info] 收到订阅请求,订阅的股票代码:
+[2024-05-28 21:27:21.766] [in] [info] szStockCode=[p2405]
+[2024-05-28 21:27:21.766] [in] [info] szStockCode=[cu2402]
+[2024-05-28 21:27:21.766] [in] [debug] CreateWriteQueue
+[2024-05-28 21:27:21.850] [in] [debug] create szStockCode=[p2405] sub list
+[2024-05-28 21:27:21.850] [in] [debug] add iClientNum=[8001] to szStockCode=[p2405] sub list
+[2024-05-28 21:27:21.850] [in] [debug] create szStockCode=[cu2402] sub list
+[2024-05-28 21:27:21.850] [in] [debug] add iClientNum=[8001] to szStockCode=[cu2402] sub list
+[2024-05-28 21:27:21.850] [in] [info] CreateWriteQueue OK,iWriteKey=[8001],iClientNum=[8001]
+[2024-05-28 21:28:01.832] [in] [info] client close,iConnFd=[12]
+[2024-05-28 21:28:01.832] [in] [debug] DelWriteQueue,iClientNum=[8001]
+[2024-05-28 21:28:01.832] [in] [info] DelWriteQueue OK,iClientNum=[8001]
+[2024-05-28 21:40:17.709] [in] [info] accept new client end,iConnFd=[12]
+[2024-05-28 21:41:00.910] [in] [info] client close,iConnFd=[12]
+[2024-05-28 21:44:11.709] [in] [info] accept new client end,iConnFd=[12]
+[2024-05-28 21:44:14.710] [in] [info] 收到订阅请求,订阅的股票代码:
+[2024-05-28 21:44:14.710] [in] [info] szStockCode=[p2409]
+[2024-05-28 21:44:14.710] [in] [debug] CreateWriteQueue
+[2024-05-28 21:44:14.784] [in] [debug] create szStockCode=[p2409] sub list
+[2024-05-28 21:44:14.784] [in] [debug] add iClientNum=[8002] to szStockCode=[p2409] sub list
+[2024-05-28 21:44:14.784] [in] [info] CreateWriteQueue OK,iWriteKey=[8002],iClientNum=[8002]

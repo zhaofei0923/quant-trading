@@ -1,0 +1,9 @@
+[2024-05-17 21:17:50.297] [in] [info] Start CTcpServer 
+[2024-05-17 21:17:50.298] [in] [info] Start CMsgQueueServer 
+[2024-05-17 21:17:50.298] [in] [info] Start CSaveData 
+[2024-05-17 21:17:50.298] [in] [info] start tcp server,port=[5882]
+[2024-05-17 21:17:53.592] [in] [info] ---- ctp MdAdapterCtp  OnFrontConnected ----
+[2024-05-17 21:17:53.592] [in] [info] send ctp MdAdapterCtp  ReqUserLogin OK
+[2024-05-17 21:17:53.680] [in] [info] ctp MdAdapterCtp OnRspUserLogin success
+[2024-05-17 21:17:53.708] [in] [info] ctp ReqSubscribeMarketdata
+[2024-05-17 21:17:53.708] [in] [info] send ctp SubscribeMarketData OK

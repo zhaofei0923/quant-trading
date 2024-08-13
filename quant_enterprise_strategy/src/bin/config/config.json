@@ -1,0 +1,18 @@
+{
+    "Log": {
+        "#LogLevel": "0-TRACE,1-DEBUG,2-INFO,3-WARN,4-ERROR,5-CRITICAL,6-OFF",
+        "LogLevel": 0
+    },
+    "Trade": {
+        "Ip": "127.0.0.1",
+        "Port": 5881,
+        "Admin": "admin",
+        "AdminPassword": "123",
+        "Trader": "101",
+        "TraderPassword": "123"
+    },
+    "Market": {
+        "Ip": "127.0.0.1",
+        "Port": 5882
+    }
+}
