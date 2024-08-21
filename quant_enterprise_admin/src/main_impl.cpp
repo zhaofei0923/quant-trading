@@ -2,11 +2,7 @@
 #include "config.h"
 #include "sim_log.h"
 #include <chrono>
-/*
-作者：赵志根
-微信：401985690
-qq群号：450286917
-*/
+
 
 int MainImpl::Init()
 {
