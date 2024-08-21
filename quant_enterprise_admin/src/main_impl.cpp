@@ -3,7 +3,6 @@
 #include "sim_log.h"
 #include <chrono>
 
-
 int MainImpl::Init()
 {
 
