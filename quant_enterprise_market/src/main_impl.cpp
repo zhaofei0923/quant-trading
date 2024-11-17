@@ -6,11 +6,7 @@
 #include "save_data.h"
 #include "trade_data.h"
 #include "mem_pool_mng.h"
-/*
-作者：赵志根
-微信：401985690
-qq群号：450286917
-*/
+
 
 int MainImpl::Init()
 {
