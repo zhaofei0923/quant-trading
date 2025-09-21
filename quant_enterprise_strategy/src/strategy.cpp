@@ -2,10 +2,12 @@
 #include "sim_log.h"
 #include "msg_queue_td.h"
 #include "mem_pool_mng.h"
+#include <chrono>
+#include "helper_tools.h"
 /*
-×÷Õß£ºÕÔÖ¾¸ù
-Î¢ĞÅ£º401985690
-qqÈººÅ£º450286917
+ä½œè€…ï¼šèµµå¿—æ ¹
+å¾®ä¿¡ï¼š401985690
+qqç¾¤å·ï¼š450286917
 */
 
 CStrategy::CStrategy()
@@ -19,7 +21,7 @@ CStrategy::CStrategy()
 
 	m_iStrategy = 1;
 
-	//Kama¾ùÏß²ßÂÔ
+	//Kamaå‡çº¿ç­–ç•¥
 	m_iKamaCount = 10;
 	m_iDirection = 10;
 	m_dKamaFast = 2.0 / (2.0 + 1);
@@ -61,6 +63,40 @@ int CStrategy::Release()
 {
 	return 0;
 }
+
+// å°è£…ä¸‹å•æ¥å£ï¼ˆå†™å…¥æœ¬åœ°äº¤æ˜“å…±äº«å†…å­˜é˜Ÿåˆ—ï¼‰
+bool CStrategy::PlaceOrder(const string &stockCode, char action, double price, int entrustNum, string *outClientOrderId)
+{
+    Head head;
+    head.iFunctionId = FUNC_PLACE_ORDER;
+    head.iMsgtype = MSG_TYPE_REQ;
+    head.iReqId = m_iCount++;
+    head.iRoletype = ROLE_TYPE_TRADER;
+    head.iErrorCode = 0;
+    head.iBodyLength = sizeof(PlaceOrderReqT);
+
+    // ç”Ÿæˆå”¯ä¸€ ClientOrderIdï¼ˆæ¯«ç§’æ—¶é—´æˆ³ï¼‰
+    long long now_ms = std::chrono::duration_cast<std::chrono::milliseconds>(
+                            std::chrono::system_clock::now().time_since_epoch())
+                            .count();
+    std::string clientOrderId = std::to_string(now_ms);
+    if (outClientOrderId)
+    {
+        *outClientOrderId = clientOrderId;
+    }
+
+    PlaceOrderReqT req;
+    snprintf(req.szClientOrderId, sizeof(req.szClientOrderId), "%s", clientOrderId.c_str());
+    snprintf(req.szStockCode, sizeof(req.szStockCode), "%s", stockCode.c_str());
+    // å¦‚éœ€æ˜¾å¼æŒ‡å®šäº¤æ˜“æ‰€ï¼Œå¯å¡«å†™ req.szExchangeID
+    req.cAction = action;
+    req.iPrice = zutil::ConvertDoubleToInt(price, PRICE_MULTIPLE);
+    req.iEntrustNum = entrustNum;
+
+    CMsgQueueTd *mq = CMsgQueueTd::GetInstance();
+    int ret = mq->WriteQueue(&head, &req, sizeof(req));
+    return (ret == 0);
+}
 int CStrategy::DealMsg(void *pMsg, int iThreadId)
 {
 	if (pMsg != NULL)
@@ -81,7 +117,7 @@ int CStrategy::DealMsg(void *pMsg, int iThreadId)
 
 	return 0;
 }
-// Éú³É½»Ò×ĞÅºÅ
+// ç”Ÿæˆäº¤æ˜“ä¿¡å·
 void CStrategy::MakeTradeSignal(ServerMsg *pServerMsg)
 {
 	// printf("----------------MakeTradeSignal----------------------\n");
@@ -101,7 +137,7 @@ void CStrategy::MakeTradeSignal(ServerMsg *pServerMsg)
 	// HeadBuf.iErrorCode = 0;
 	// HeadBuf.iBodyLength = sizeof(PlaceOrderReqT);
 
-	// //Èç¹ûÃ»ÓĞ·¢ËÍÎ¯ÍĞµ¥£¬Ôò·¢ËÍ
+	// //å¦‚æœæ²¡æœ‰å‘é€å§”æ‰˜å•ï¼Œåˆ™å‘é€
 	// if (false == m_IsSendOrder)
 	// {
 	// 	PlaceOrderReqT OrderReq;
@@ -118,26 +154,26 @@ void CStrategy::MakeTradeSignal(ServerMsg *pServerMsg)
 	// 		CMsgQueueTd*pCMsgQueueTd = CMsgQueueTd::GetInstance();
 	// 		pCMsgQueueTd->WriteQueue(&HeadBuf, &OrderReq, sizeof(OrderReq));
 
-	// 		//·¢ËÍÎ¯ÍĞµ¥±êÖ¾¸ÄÎªtrue,¼´ÒÑ·¢ËÍ
+	// 		//å‘é€å§”æ‰˜å•æ ‡å¿—æ”¹ä¸ºtrue,å³å·²å‘é€
 	// 		m_IsSendOrder = true;
 
 	// 	}
 
 	// }
 }
-// Æ½¾ùÏß²ßÂÔ
-// ·µ»ØÖµ£ºtrue-½»Ò×£¬false-²»½»Ò×
+// å¹³å‡çº¿ç­–ç•¥
+// è¿”å›å€¼ï¼štrue-äº¤æ˜“ï¼Œfalse-ä¸äº¤æ˜“
 bool CStrategy::AverageLine(MarketData *pMarketData, PlaceOrderReqT &OrderReq)
 {
 	// m_LongQuote.push_back(*pMarketData);
-	// //±£Áô×îĞÂ20¸ö¿ìÕÕ
+	// //ä¿ç•™æœ€æ–°20ä¸ªå¿«ç…§
 	// if (m_LongQuote.size() > 20)
 	// {
 	// 	m_LongQuote.pop_front();
 	// }
 
 	// m_ShortQuote.push_back(*pMarketData);
-	// //±£Áô×îĞÂ5¸ö¿ìÕÕ
+	// //ä¿ç•™æœ€æ–°5ä¸ªå¿«ç…§
 	// if (m_ShortQuote.size() > 5)
 	// {
 	// 	m_ShortQuote.pop_front();
@@ -145,13 +181,13 @@ bool CStrategy::AverageLine(MarketData *pMarketData, PlaceOrderReqT &OrderReq)
 
 	// printf("----AverageLine----m_LongQuote.size()=[%d]-----\n", m_LongQuote.size());
 
-	// //¿ìÕÕÊıÁ¿Ã»ÓĞ´ïµ½20
+	// //å¿«ç…§æ•°é‡æ²¡æœ‰è¾¾åˆ°20
 	// if (m_LongQuote.size() < 20)
 	// {
 	// 	return false;
 	// }
 
-	// //È¡20¸ö¿ìÕÕµÄ¾ù¼Û
+	// //å–20ä¸ªå¿«ç…§çš„å‡ä»·
 	// double dPrice20 = 0;
 	// list<MarketData>::iterator iter;
 	// for (iter = m_LongQuote.begin(); iter != m_LongQuote.end(); ++iter)
@@ -162,7 +198,7 @@ bool CStrategy::AverageLine(MarketData *pMarketData, PlaceOrderReqT &OrderReq)
 	// double dAverPrice20 = dPrice20 / 20;
 	// LDebug("dAverPrice20=[{0}]", dAverPrice20);
 
-	// //È¡5¸ö¿ìÕÕµÄ¾ù¼Û
+	// //å–5ä¸ªå¿«ç…§çš„å‡ä»·
 	// double dPrice5 = 0;
 	// for (iter = m_ShortQuote.begin(); iter != m_ShortQuote.end(); ++iter)
 	// {
@@ -172,18 +208,18 @@ bool CStrategy::AverageLine(MarketData *pMarketData, PlaceOrderReqT &OrderReq)
 	// double dAverPrice5 = dPrice5 / 5;
 	// LDebug("dAverPrice5=[{0}]", dAverPrice5);
 
-	// //5¸ö¿ìÕÕ¾ùÏß´óÓÚ20¸ö¿ìÕÕ¾ùÏß,¿ªÊ¼¹ºÂò
+	// //5ä¸ªå¿«ç…§å‡çº¿å¤§äº20ä¸ªå¿«ç…§å‡çº¿,å¼€å§‹è´­ä¹°
 	// if (dAverPrice5 > dAverPrice20)
 	// {
-	// 	//´Ë´¦ÒÔÃëÊı×÷ÎªszClientOrderId£¬¿ÉÒÔĞŞ¸ÄÎªÊ±·ÖÃë£¬Ö»ÒªÎ¨Ò»¾Í¿ÉÒÔ
+	// 	//æ­¤å¤„ä»¥ç§’æ•°ä½œä¸ºszClientOrderIdï¼Œå¯ä»¥ä¿®æ”¹ä¸ºæ—¶åˆ†ç§’ï¼Œåªè¦å”¯ä¸€å°±å¯ä»¥
 	// 	string szSeconds = to_string(std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count());
 	// 	string szClientOrderId = szSeconds;
 	// 	snprintf(OrderReq.szClientOrderId, sizeof(OrderReq.szClientOrderId), "%s", szClientOrderId.c_str());
 	// 	snprintf(OrderReq.szStockCode, sizeof(OrderReq.szStockCode), "%s", pMarketData->szStockCode);
-	// 	//ctpĞĞÇéÃ»ÓĞExchangeID£¬´Ë´¦²»Ìî
+	// 	//ctpè¡Œæƒ…æ²¡æœ‰ExchangeIDï¼Œæ­¤å¤„ä¸å¡«
 	// 	//snprintf(OrderReq.szExchangeID, sizeof(OrderReq.szExchangeID), "DCE");
 	// 	OrderReq.cAction = ORDER_ACTION_BUY_OPEN;
-	// 	//ctpĞĞÇé¼Û¸ñÒÑ¾­³ËÒÔPRICE_MULTIPLE
+	// 	//ctpè¡Œæƒ…ä»·æ ¼å·²ç»ä¹˜ä»¥PRICE_MULTIPLE
 	// 	OrderReq.iPrice = (pMarketData->iBuyPrice1/ PRICE_MULTIPLE+10)* PRICE_MULTIPLE;
 	// 	OrderReq.iEntrustNum = 1;
 
@@ -204,14 +240,14 @@ bool CStrategy::AverageLine(MarketData *pMarketData, PlaceOrderReqT &OrderReq)
 	return false;
 }
 
-/// Éú³É¶©ÔÄµÄBar
+/// ç”Ÿæˆè®¢é˜…çš„Bar
 
 bool CStrategy::IsValidTick(string sTickTime)
 {
 	// 8:59:00-11:31:00,13:29:00-15:01:00,20:59:00-02:30:00
 	// iHour>0 && iHour<23 , iMinute>0 && iMinute<59 , iSecond>0 && iSecond<59
-	// ÔçÅÌ8£º59·Ö»áÓĞÒ»¸ötickÊı¾İ´ËÊ±tickÓĞĞ§µ«²»×ö´¦Àí£¬11£º30·ÖÖ®ºó»áÓĞÊı¾İĞèÒª´¦Àí
-	// Ò¹ÅÌ½áÊøÊ±¼äµ½µ½11£º30²¿·ÖÆ·ÖÖµ½2£º30£¬Ò¹ÅÌ½áÊøºó²»»áÓĞÊı¾İ
+	// æ—©ç›˜8ï¼š59åˆ†ä¼šæœ‰ä¸€ä¸ªtickæ•°æ®æ­¤æ—¶tickæœ‰æ•ˆä½†ä¸åšå¤„ç†ï¼Œ11ï¼š30åˆ†ä¹‹åä¼šæœ‰æ•°æ®éœ€è¦å¤„ç†
+	// å¤œç›˜ç»“æŸæ—¶é—´åˆ°åˆ°11ï¼š30éƒ¨åˆ†å“ç§åˆ°2ï¼š30ï¼Œå¤œç›˜ç»“æŸåä¸ä¼šæœ‰æ•°æ®
 
 	int iHour = atoi(sTickTime.substr(0, 2).c_str());
 	int iMinute = atoi(sTickTime.substr(3, 2).c_str());
@@ -297,7 +333,7 @@ void CStrategy::CalculateBar(MarketData *pMarketData)
 		}
 		else if (CalculateTimeDiff(bar->sTime, sUpdateTime) == 60)
 		{
-			// ½«barÊı¾İ´æ´¢µ½vectorÈİÆ÷ÖĞ
+			// å°†baræ•°æ®å­˜å‚¨åˆ°vectorå®¹å™¨ä¸­
 			bar->sTime = sUpdateTime.substr(0, 6) + "00";
 			bar->dVolume = double(pMarketData->iVolume) - bar->dVolume;
 
@@ -318,7 +354,7 @@ void CStrategy::CalculateBar(MarketData *pMarketData)
 				newBar = make_shared<Bar>();
 			}
 
-			// ½«mBarÖĞµÄÊı¾İ¸³Öµ¸ønewBar
+			// å°†mBarä¸­çš„æ•°æ®èµ‹å€¼ç»™newBar
 			newBar->sDate = bar->sDate;
 			newBar->sTime = bar->sTime;
 			newBar->sInstrumentID = bar->sInstrumentID;
@@ -338,7 +374,7 @@ void CStrategy::CalculateBar(MarketData *pMarketData)
 				CalculateSubBar(newBar->sInstrumentID);
 			}
 
-			// ¸üĞÂmbarÖĞµÄÊı¾İ
+			// æ›´æ–°mbarä¸­çš„æ•°æ®
 			bar->dVolume = double(pMarketData->iVolume);
 			bar->dOpenInterest = double(pMarketData->iOpenInterest);
 			bar->dClose = double(pMarketData->iLastPrice / PRICE_MULTIPLE);
@@ -348,7 +384,7 @@ void CStrategy::CalculateBar(MarketData *pMarketData)
 		}
 		else if (CalculateTimeDiff(bar->sTime, sUpdateTime) > 60)
 		{
-			// Á½¸ötickÖ®¼äµÄÊ±¼ä²î´óÓÚ60Ãë£¬ËµÃ÷ÓĞtickÊı¾İ¶ªÊ§£¬ĞèÒªÖØĞÂ¼ÆËã¡£°´ÕÕĞÂµÄtick¼ÆËãbar
+			// ä¸¤ä¸ªtickä¹‹é—´çš„æ—¶é—´å·®å¤§äº60ç§’ï¼Œè¯´æ˜æœ‰tickæ•°æ®ä¸¢å¤±ï¼Œéœ€è¦é‡æ–°è®¡ç®—ã€‚æŒ‰ç…§æ–°çš„tickè®¡ç®—bar
 
 			bar->dVolume = double(pMarketData->iVolume) - bar->dVolume;
 
@@ -369,9 +405,9 @@ void CStrategy::CalculateBar(MarketData *pMarketData)
 				newBar = make_shared<Bar>();
 			}
 
-			// ½«mBarÖĞµÄÊı¾İ¸³Öµ¸ønewBar
+			// å°†mBarä¸­çš„æ•°æ®èµ‹å€¼ç»™newBar
 			newBar->sDate = bar->sDate;
-			// bar->cTimeµÄ·ÖÖÓÊı¼Ó1
+			// bar->cTimeçš„åˆ†é’Ÿæ•°åŠ 1
 			int iHour = stoi(bar->sTime.substr(0, 2));
 			int iMinute = stoi(bar->sTime.substr(3, 2));
 			int iSecond = stoi(bar->sTime.substr(6, 2));
@@ -421,7 +457,7 @@ void CStrategy::CalculateBar(MarketData *pMarketData)
 					CalculateSubBar(newBar->sInstrumentID);
 				}
 
-				// ¸üĞÂmbarÖĞµÄÊı¾İ
+				// æ›´æ–°mbarä¸­çš„æ•°æ®
 				bar->dVolume = double(pMarketData->iVolume);
 				bar->dOpenInterest = double(pMarketData->iOpenInterest);
 				bar->dClose = double(pMarketData->iLastPrice / PRICE_MULTIPLE);
@@ -463,7 +499,7 @@ void CStrategy::CalculateBar(MarketData *pMarketData)
 			iSecond = 0;
 		}
 
-		// °ÑiHour,iMinute,iSecond×ª»»Îª"09:00:00"ÀàĞÍµÄÊ±¼ä¸ñÊ½
+		// æŠŠiHour,iMinute,iSecondè½¬æ¢ä¸º"09:00:00"ç±»å‹çš„æ—¶é—´æ ¼å¼
 		char cTime[20];
 		sprintf(cTime, "%02d:%02d:%02d", iHour, iMinute, iSecond);
 
@@ -560,7 +596,7 @@ void CStrategy::CalculateSubBar(string sInstrumentId)
 
 }
 
-//»ñÈ¡¿ÉÖ´ĞĞÎÄ¼şÂ·¾¶
+//è·å–å¯æ‰§è¡Œæ–‡ä»¶è·¯å¾„
 string CStrategy::GetExecutablePath()
 {
 	char processdir[1000];
@@ -569,7 +605,7 @@ string CStrategy::GetExecutablePath()
 		printf("readlink  fail\n");
 		return  "";
 	}
-	//º¯Êı²éÕÒ×Ö·ûÔÚÖ¸¶¨×Ö·û´®ÖĞ×îºóÒ»´Î³öÏÖµÄÎ»ÖÃÈç¹û³É¹¦£¬Ôò·µ»ØÖ¸¶¨×Ö·û×îºóÒ»´Î³öÏÖÎ»ÖÃµÄµØÖ·
+	//å‡½æ•°æŸ¥æ‰¾å­—ç¬¦åœ¨æŒ‡å®šå­—ç¬¦ä¸²ä¸­æœ€åä¸€æ¬¡å‡ºç°çš„ä½ç½®å¦‚æœæˆåŠŸï¼Œåˆ™è¿”å›æŒ‡å®šå­—ç¬¦æœ€åä¸€æ¬¡å‡ºç°ä½ç½®çš„åœ°å€
 	char*filename = strrchr(processdir, '/');
 	if (filename == NULL)
 	{
@@ -581,7 +617,7 @@ string CStrategy::GetExecutablePath()
 	return ret;
 }
 
-//´´½¨Ä¿Â¼¡¢´´½¨ÎÄ¼ş¡¢Ğ´Èë±êÌâ
+//åˆ›å»ºç›®å½•ã€åˆ›å»ºæ–‡ä»¶ã€å†™å…¥æ ‡é¢˜
 void CStrategy::CreateFile()
 {
 
@@ -590,22 +626,22 @@ void CStrategy::CreateFile()
     string szToday = to_string((1900 + ltm->tm_year) * 10000 + (1 + ltm->tm_mon) * 100 + ltm->tm_mday);
 	string szExecutablePath = GetExecutablePath();
 
-	//´´½¨barÄ¿Â¼
+	//åˆ›å»ºbarç›®å½•
 	string szMkdir = string("cd ") + szExecutablePath + string("; mkdir bar_data; cd bar_data; mkdir ") + szToday + string(";");
 	int Ret = system(szMkdir.c_str());
     if (Ret == -1)
     {
-        cout << "´´½¨Ä¿Â¼Ê§°Ü" << endl;
+        cout << "åˆ›å»ºç›®å½•å¤±è´¥" << endl;
     }
-	//´´½¨kamaÄ¿Â¼
+	//åˆ›å»ºkamaç›®å½•
 	string szMkdirKama = string("cd ") + szExecutablePath + string("; mkdir kama_data; cd kama_data; mkdir ") + szToday + string(";");
 	int RetKama = system(szMkdirKama.c_str());
 	if (RetKama == -1)
 	{
-		cout << "´´½¨Ä¿Â¼Ê§°Ü" << endl;
+		cout << "åˆ›å»ºç›®å½•å¤±è´¥" << endl;
 	}
 
-    //´´½¨barÎÄ¼ş
+    //åˆ›å»ºbaræ–‡ä»¶
 	string szFile = szExecutablePath + "/bar_data/" + szToday + "/Bar.csv";
 
 	m_BarStream.open(szFile.c_str(), ios::out);
@@ -618,7 +654,7 @@ void CStrategy::CreateFile()
 
 	}
 
-	//´´½¨kamaÎÄ¼ş
+	//åˆ›å»ºkamaæ–‡ä»¶
 	string szFileKama = szExecutablePath + "/kama_data/" + szToday + "/Kama.csv";
 	m_KamaStream.open(szFileKama.c_str(), ios::out);
 
@@ -629,12 +665,12 @@ void CStrategy::CreateFile()
 	}
 
 
-	//Ğ´Èëbar±êÌâ
+	//å†™å…¥baræ ‡é¢˜
 	string szTitle = "Date,Time,InstID,Open,High,Low,Close,Volume,OpenInterest,\n";
 	m_BarStream.write(szTitle.c_str(), szTitle.size());
 	m_BarStream.flush();
 
-	//Ğ´Èëkama±êÌâ
+	//å†™å…¥kamaæ ‡é¢˜
 	string szTitleKama = "Date,Time,InstID,Kama,ER,High,Low\n";
 	m_KamaStream.write(szTitleKama.c_str(), szTitleKama.size());
 	m_KamaStream.flush();
@@ -660,7 +696,7 @@ void CStrategy::WriteBarData(Bar &bar)
 
 void CStrategy::ReadBarData()
 {
-	//»ñÈ¡../bar_data/Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼ş¼ĞÃû³Æ£¬²¢×ª»¯ÎªintÀàĞÍ£¬ÕÒ³ö×î´óµÄÎÄ¼ş¼ĞÃû³Æ
+	//è·å–../bar_data/ç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶å¤¹åç§°ï¼Œå¹¶è½¬åŒ–ä¸ºintç±»å‹ï¼Œæ‰¾å‡ºæœ€å¤§çš„æ–‡ä»¶å¤¹åç§°
 	string szExecutablePath = GetExecutablePath();
 	string szMkdir = string("cd ") + szExecutablePath + string("; cd bar_data; ls -l | grep ^d | awk '{print $9}'");
 	FILE *fp = popen(szMkdir.c_str(), "r");
@@ -681,7 +717,7 @@ void CStrategy::ReadBarData()
 	}
 	pclose(fp);
 
-	//¶ÁÈ¡×î´óÎÄ¼ş¼ĞÏÂµÄBar.csvÎÄ¼ş
+	//è¯»å–æœ€å¤§æ–‡ä»¶å¤¹ä¸‹çš„Bar.csvæ–‡ä»¶
 	string szFile = szExecutablePath + "/bar_data/" + to_string(iMax) + "/Bar.csv";
 	ifstream BarStream(szFile.c_str());
 	if (!BarStream.is_open())
@@ -690,11 +726,11 @@ void CStrategy::ReadBarData()
 		return;
 	}
 
-	//¶ÁÈ¡±êÌâ
+	//è¯»å–æ ‡é¢˜
 	string szTitle;
 	getline(BarStream, szTitle);
 
-	//¶ÁÈ¡Êı¾İ
+	//è¯»å–æ•°æ®
 	string szLine;
 	while (getline(BarStream, szLine))
 	{
@@ -750,7 +786,7 @@ void CStrategy::SelectStrategy(int iNumStrategy, string sInstrumentID)
 	switch (iNumStrategy)
 	{
 	case 1:
-		// KAMA¾ùÏß²ßÂÔ
+		// KAMAå‡çº¿ç­–ç•¥
 		KamaStrategy(sInstrumentID);
 		break;
 	default:
@@ -760,7 +796,7 @@ void CStrategy::SelectStrategy(int iNumStrategy, string sInstrumentID)
 
 void CStrategy::KamaStrategy(string sInstrumentID)
 {
-	//¼ÆËãKAMA¾ùÏß
+	//è®¡ç®—KAMAå‡çº¿
 	if(m_bIsNewBar)
 	{
 		CalculateKama(sInstrumentID);
@@ -782,7 +818,7 @@ void CStrategy::CalculateKama(string sInstrumentID)
 
 		double dDirection = 0;
 
-		//´ÓµÚ20¸öÔªËØ±éÀúµ½×îºóÒ»¸öÔªËØ£¬ÓÃÖÇÄÜÖ¸ÕëµÄ·½Ê½·ÃÎÊdBarÖĞµÄÔªËØ
+		//ä»ç¬¬20ä¸ªå…ƒç´ éå†åˆ°æœ€åä¸€ä¸ªå…ƒç´ ï¼Œç”¨æ™ºèƒ½æŒ‡é’ˆçš„æ–¹å¼è®¿é—®dBarä¸­çš„å…ƒç´ 
 		deque<shared_ptr<Bar>>::iterator it = dBar.begin();
 
 		int ishift = dBar.size() - m_iDirection;
@@ -803,7 +839,7 @@ void CStrategy::CalculateKama(string sInstrumentID)
 
 		double c = pow(smooth, 2);
 
-		// ¼ÆËãKAMA
+		// è®¡ç®—KAMA
 
 		shared_ptr<KAMA> kama = make_shared<KAMA>();
 
@@ -874,7 +910,7 @@ void CStrategy::CalculateKama(string sInstrumentID)
 	}
 	else
 	{
-		// Èç¹ûdBarµÄÔªËØ¸öÊıĞ¡ÓÚm_iDirection£¬kamaµÄÖµµÈÓÚdBarµÄ×îºóÒ»¸öÔªËØµÄÊÕÅÌ¼Û
+		// å¦‚æœdBarçš„å…ƒç´ ä¸ªæ•°å°äºm_iDirectionï¼Œkamaçš„å€¼ç­‰äºdBarçš„æœ€åä¸€ä¸ªå…ƒç´ çš„æ”¶ç›˜ä»·
 
 		shared_ptr<KAMA> kama = make_shared<KAMA>();
 
@@ -956,7 +992,7 @@ void CStrategy::WriteKamaData(KAMA &kama)
 
 void CStrategy::ReadKamaData()
 {
-	//»ñÈ¡../kama_data/Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼ş¼ĞÃû³Æ£¬²¢×ª»¯ÎªintÀàĞÍ£¬ÕÒ³ö×î´óµÄÎÄ¼ş¼ĞÃû³Æ
+	//è·å–../kama_data/ç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶å¤¹åç§°ï¼Œå¹¶è½¬åŒ–ä¸ºintç±»å‹ï¼Œæ‰¾å‡ºæœ€å¤§çš„æ–‡ä»¶å¤¹åç§°
 	string szExecutablePath = GetExecutablePath();
 	string szMkdir = string("cd ") + szExecutablePath + string("; cd kama_data; ls -l | grep ^d | awk '{print $9}'");
 	FILE *fp = popen(szMkdir.c_str(), "r");
@@ -977,7 +1013,7 @@ void CStrategy::ReadKamaData()
 	}
 	pclose(fp);
 
-	//¶ÁÈ¡×î´óÎÄ¼ş¼ĞÏÂµÄKama.csvÎÄ¼ş
+	//è¯»å–æœ€å¤§æ–‡ä»¶å¤¹ä¸‹çš„Kama.csvæ–‡ä»¶
 	string szFile = szExecutablePath + "/kama_data/" + to_string(iMax) + "/Kama.csv";
 	ifstream KamaStream(szFile.c_str());
 	if (!KamaStream.is_open())
@@ -986,11 +1022,11 @@ void CStrategy::ReadKamaData()
 		return;
 	}
 
-	//¶ÁÈ¡±êÌâ
+	//è¯»å–æ ‡é¢˜
 	string szTitle;
 	getline(KamaStream, szTitle);
 
-	//¶ÁÈ¡Êı¾İ
+	//è¯»å–æ•°æ®
 	string szLine;
 	while (getline(KamaStream, szLine))
 	{
@@ -1036,7 +1072,7 @@ double CStrategy::CalculateFilter(string sInstrumentID)
 
 	double stdev = 0.0;
 
-	//¼ÆËãdKama×îºóm_iFilterCount+1¸öÔªËØµÄ²îÖµ£¬²¢ÇÒ¼ÆËãÕâĞ©²îÖµµÄ±ê×¼²î
+	//è®¡ç®—dKamaæœ€åm_iFilterCount+1ä¸ªå…ƒç´ çš„å·®å€¼ï¼Œå¹¶ä¸”è®¡ç®—è¿™äº›å·®å€¼çš„æ ‡å‡†å·®
 	if (dKama.size() > m_iFilterCount)
 	{
 		vector<double> vDiff;
@@ -1045,7 +1081,7 @@ double CStrategy::CalculateFilter(string sInstrumentID)
 			double dDiff = dKama[i]->dKama - dKama[i - 1]->dKama;
 			vDiff.push_back(dDiff);
 		}
-		//ÓÃº¯Êı¼ÆËãvDiffÖĞÔªËØµÄ±ê×¼²î
+		//ç”¨å‡½æ•°è®¡ç®—vDiffä¸­å…ƒç´ çš„æ ‡å‡†å·®
 		double sum = std::accumulate(vDiff.begin(), vDiff.end(), 0.0);
 		double mean = sum / vDiff.size();
 

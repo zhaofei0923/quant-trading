@@ -37,63 +37,66 @@ public:
 	virtual int DealMsg(void*pMsg, int iThreadId);
 	void ExecuteStrategy(ServerMsg*pServerMsg);
 public:
-	//Éú³É½»Ò×ĞÅºÅ
+	//ç”Ÿæˆäº¤æ˜“ä¿¡å·
 	void MakeTradeSignal(ServerMsg*pServerMsg);
-	//Æ½¾ùÏß²ßÂÔ
+	//å¹³å‡çº¿ç­–ç•¥
 	bool AverageLine(MarketData*pMarketData, PlaceOrderReqT&OrderReq);
 public:
-	list<MarketData> m_LongQuote; //´æ´¢×îĞÂ20¸ö¿ìÕÕ
-	list<MarketData> m_ShortQuote; //´æ´¢×îĞÂ5¸ö¿ìÕÕ
+	list<MarketData> m_LongQuote; //å­˜å‚¨æœ€æ–°20ä¸ªå¿«ç…§
+	list<MarketData> m_ShortQuote; //å­˜å‚¨æœ€æ–°5ä¸ªå¿«ç…§
 	int  m_iCount;
 	bool m_IsSendOrder;
 
-///Éú³É¶©ÔÄµÄBar
+///ç”Ÿæˆè®¢é˜…çš„Bar
 public:
-	bool IsValidTick(string sTickTime);//ÅĞ¶ÏÊÇ·ñÊÇÓĞĞ§µÄtick
-	bool IsSubBar(string sBarTime, int iBarCount);//ÅĞ¶ÏÊÇ·ñÊÇ¶©ÔÄµÄBar
-	int  CalculateTimeDiff(string sTime1, string sTime2);//¼ÆËãÁ½¸ö"09:00:00"ÀàĞÍÊ±¼ä¸ñÊ½µÄ²îÖµ£¬µ¥Î»ÎªÃë,stime2´óÓÚstime1
-	void CalculateBar(MarketData*pMarketData);//¼ÆËãÒ»·ÖÖÓBar,ÓÃÒ»·ÖÖÓbarºÏ³É¶©ÔÄµÄBar
-	void CalculateSubBar(string sInstrumentId);//¼ÆËã¶©ÔÄµÄBar,ÓÃÒ»·ÖÖÓÏßºÏ³É¡£¿ÉÒÔ¶©ÔÄ1·ÖÖÓ£¬5·ÖÖÓ£¬15·ÖÖÓ£¬30·ÖÖÓ£¬60·ÖÖÓ£¬ÈÕÏß£¬ÖÜÏß£¬ÔÂÏßµÈ
-	//±£´æBarÊı¾İµ½CSVÎÄ¼ş
-	string GetExecutablePath();//»ñÈ¡¿ÉÖ´ĞĞÎÄ¼şÂ·¾¶
-	void CreateFile();//´´½¨Ä¿Â¼¡¢´´½¨ÎÄ¼ş¡¢Ğ´Èë±êÌâ
-	void WriteBarData(Bar &bar);//Ğ´ÈëBarÊı¾İµ½CSVÎÄ¼ş
+	bool IsValidTick(string sTickTime);//åˆ¤æ–­æ˜¯å¦æ˜¯æœ‰æ•ˆçš„tick
+	bool IsSubBar(string sBarTime, int iBarCount);//åˆ¤æ–­æ˜¯å¦æ˜¯è®¢é˜…çš„Bar
+	int  CalculateTimeDiff(string sTime1, string sTime2);//è®¡ç®—ä¸¤ä¸ª"09:00:00"ç±»å‹æ—¶é—´æ ¼å¼çš„å·®å€¼ï¼Œå•ä½ä¸ºç§’,stime2å¤§äºstime1
+	void CalculateBar(MarketData*pMarketData);//è®¡ç®—ä¸€åˆ†é’ŸBar,ç”¨ä¸€åˆ†é’Ÿbaråˆæˆè®¢é˜…çš„Bar
+	void CalculateSubBar(string sInstrumentId);//è®¡ç®—è®¢é˜…çš„Bar,ç”¨ä¸€åˆ†é’Ÿçº¿åˆæˆã€‚å¯ä»¥è®¢é˜…1åˆ†é’Ÿï¼Œ5åˆ†é’Ÿï¼Œ15åˆ†é’Ÿï¼Œ30åˆ†é’Ÿï¼Œ60åˆ†é’Ÿï¼Œæ—¥çº¿ï¼Œå‘¨çº¿ï¼Œæœˆçº¿ç­‰
+	//ä¿å­˜Baræ•°æ®åˆ°CSVæ–‡ä»¶
+	string GetExecutablePath();//è·å–å¯æ‰§è¡Œæ–‡ä»¶è·¯å¾„
+	void CreateFile();//åˆ›å»ºç›®å½•ã€åˆ›å»ºæ–‡ä»¶ã€å†™å…¥æ ‡é¢˜
+	void WriteBarData(Bar &bar);//å†™å…¥Baræ•°æ®åˆ°CSVæ–‡ä»¶
 public:
-	int m_iBarCount;//¶©ÔÄµÄBarÖÜÆÚ³¤¶È
-	int m_iSubCount;//¶©ÔÄµÄBarÊıÁ¿
-	map<string, shared_ptr<Bar>> m_mBar;//°´ÕÕinstrumentID´æ´¢ÕıÔÚ¸üĞÂµÄÒ»·ÖÖÓBarÖµ
-	map<string, deque<shared_ptr<Bar>>> m_mDequeMinBar;//¸üĞÂºóµÄÒ»·ÖÖÓBarÖµ£¬´æ´¢µ½DequeÈİÆ÷ÖĞ£¬mapµÄkeyÖµÎªInstrumentID
-	map<string, map<int, deque<shared_ptr<Bar>>>> m_mmDequeSubBar;//mapµÄkeyÖµÎªInstrumentID£¬mapµÄvalueÖµÎªmapÀàĞÍ£¬mapµÄkeyÖµÎªint,BarµÄÖÜÆÚ³¤¶È£¬mapµÄvalueÖµÎªDequeÈİÆ÷£¬´æ´¢BarÀàĞÍµÄÖµ
-	fstream m_BarStream;//±£´æBarÊı¾İµ½CSVÎÄ¼ş
-	bool m_bIsNewBar;//ÊÇ·ñÊÇĞÂµÄBar
+	int m_iBarCount;//è®¢é˜…çš„Barå‘¨æœŸé•¿åº¦
+	int m_iSubCount;//è®¢é˜…çš„Baræ•°é‡
+	map<string, shared_ptr<Bar>> m_mBar;//æŒ‰ç…§instrumentIDå­˜å‚¨æ­£åœ¨æ›´æ–°çš„ä¸€åˆ†é’ŸBarå€¼
+	map<string, deque<shared_ptr<Bar>>> m_mDequeMinBar;//æ›´æ–°åçš„ä¸€åˆ†é’ŸBarå€¼ï¼Œå­˜å‚¨åˆ°Dequeå®¹å™¨ä¸­ï¼Œmapçš„keyå€¼ä¸ºInstrumentID
+	map<string, map<int, deque<shared_ptr<Bar>>>> m_mmDequeSubBar;//mapçš„keyå€¼ä¸ºInstrumentIDï¼Œmapçš„valueå€¼ä¸ºmapç±»å‹ï¼Œmapçš„keyå€¼ä¸ºint,Barçš„å‘¨æœŸé•¿åº¦ï¼Œmapçš„valueå€¼ä¸ºDequeå®¹å™¨ï¼Œå­˜å‚¨Barç±»å‹çš„å€¼
+	fstream m_BarStream;//ä¿å­˜Baræ•°æ®åˆ°CSVæ–‡ä»¶
+	bool m_bIsNewBar;//æ˜¯å¦æ˜¯æ–°çš„Bar
 
 public:
-	void ReadBarData();//¶ÁÈ¡Bar.csvÎÄ¼şÖĞµÄbarÊı¾İ
+	void ReadBarData();//è¯»å–Bar.csvæ–‡ä»¶ä¸­çš„baræ•°æ®
 
-//Ñ¡Ôñ²ßÂÔ
+//é€‰æ‹©ç­–ç•¥
 public:
-	int m_iStrategy;//Ñ¡ÔñµÄ²ßÂÔ
-	void SelectStrategy(int iNumStrategy,string sInstID);//Ñ¡Ôñ²ßÂÔ 1:KAMA¾ùÏß²ßÂÔ
+	int m_iStrategy;//é€‰æ‹©çš„ç­–ç•¥
+	void SelectStrategy(int iNumStrategy,string sInstID);//é€‰æ‹©ç­–ç•¥ 1:KAMAå‡çº¿ç­–ç•¥
 
-//KAMA¾ùÏß²ßÂÔ
+//KAMAå‡çº¿ç­–ç•¥
 public:
 
-	int m_iKamaCount;//´æ´¢KamaµÄ¸öÊı
-	int m_iDirection;//Kama·½ÏòµÄ¼ÆËã³¤¶È
-	double m_dKamaFast;//KAMA¾ùÏß¿ìËÙEMAµÄÈ¨ÖØ
-	double m_dKamaSlow;//KAMA¾ùÏßÂıËÙEMAµÄÈ¨ÖØ
-	int m_iFilterCount;//¹ıÂËÆ÷µÄ¼ÆËã³¤¶È
-	double m_dFilter;//¹ıÂËÆ÷µÄÈ¨ÖØ
-	map<string, deque<shared_ptr<KAMA>>> m_mDequeKama;//¸üĞÂºóµÄKamaÖµ£¬´æ´¢µ½DequeÈİÆ÷ÖĞ£¬mapµÄkeyÖµÎªInstrumentID
-	fstream m_KamaStream;//±£´æKamaÊı¾İµ½CSVÎÄ¼ş
+	int m_iKamaCount;//å­˜å‚¨Kamaçš„ä¸ªæ•°
+	int m_iDirection;//Kamaæ–¹å‘çš„è®¡ç®—é•¿åº¦
+	double m_dKamaFast;//KAMAå‡çº¿å¿«é€ŸEMAçš„æƒé‡
+	double m_dKamaSlow;//KAMAå‡çº¿æ…¢é€ŸEMAçš„æƒé‡
+	int m_iFilterCount;//è¿‡æ»¤å™¨çš„è®¡ç®—é•¿åº¦
+	double m_dFilter;//è¿‡æ»¤å™¨çš„æƒé‡
+	map<string, deque<shared_ptr<KAMA>>> m_mDequeKama;//æ›´æ–°åçš„Kamaå€¼ï¼Œå­˜å‚¨åˆ°Dequeå®¹å™¨ä¸­ï¼Œmapçš„keyå€¼ä¸ºInstrumentID
+	fstream m_KamaStream;//ä¿å­˜Kamaæ•°æ®åˆ°CSVæ–‡ä»¶
 
 public:
-	void KamaStrategy(string SInstrumentID);//KAMA¾ùÏß²ßÂÔ
-	void CalculateKama(string SInstrumentID);//¼ÆËãKAMA¾ùÏß
-	void WriteKamaData(KAMA &kama);//Ğ´ÈëKamaÊı¾İµ½CSVÎÄ¼ş
-	void ReadKamaData();//¶ÁÈ¡Kama.csvÎÄ¼şÖĞµÄKamaÊı¾İ
-	double CalculateFilter(string sInstrumentID);//¼ÆËã¹ıÂËÆ÷
-	void CalculateKamaSignal(string sInstrumentID);//¼ÆËãKamaĞÅºÅ
+	void KamaStrategy(string SInstrumentID);//KAMAå‡çº¿ç­–ç•¥
+	void CalculateKama(string SInstrumentID);//è®¡ç®—KAMAå‡çº¿
+	void WriteKamaData(KAMA &kama);//å†™å…¥Kamaæ•°æ®åˆ°CSVæ–‡ä»¶
+	void ReadKamaData();//è¯»å–Kama.csvæ–‡ä»¶ä¸­çš„Kamaæ•°æ®
+	double CalculateFilter(string sInstrumentID);//è®¡ç®—è¿‡æ»¤å™¨
+	void CalculateKamaSignal(string sInstrumentID);//è®¡ç®—Kamaä¿¡å·
+
+public:
+	bool PlaceOrder(const string &stockCode, char action, double price, int entrustNum, string *outClientOrderId = nullptr);
 
 };
 
