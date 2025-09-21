@@ -1,7 +1,0 @@
-[2024-07-29 14:22:54.606] [in] [info] Start CStrategy 
-[2024-07-29 14:22:57.608] [in] [info] Init CMsgQueueTd 
-[2024-07-29 14:22:57.608] [in] [info] create CreateReadQueue Ok, iReadKey=[2002]
-[2024-07-29 14:22:57.608] [in] [info] create CreateWriteQueue Ok, iWriteKey=[2001]
-[2024-07-29 14:22:57.608] [in] [info] Start CMsgQueueTd 
-[2024-07-29 14:22:57.693] [in] [info] Init CMsgQueueMd 
-[2024-07-29 14:22:57.693] [in] [info] Start CMsgQueueMd 

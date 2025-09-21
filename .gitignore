@@ -1,1 +1,54 @@
-quant_enterprise_strategy/src/build/.cmake/api/v1/reply/index-2024-08-21T00-18-49-0425.json
+# OS / Editor
+.DS_Store
+Thumbs.db
+
+# VS Code (keep common project files)
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+
+# C/C++ build artifacts and CMake outputs
+**/build/
+**/cmake-build*/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+**/CMakeScripts/
+**/*.o
+**/*.obj
+**/*.lo
+**/*.la
+**/*.a
+**/*.so
+**/*.dll
+**/*.dylib
+**/*.lib
+**/*.pdb
+**/*.exe
+**/*.out
+compile_commands.json
+
+# Project-specific ignores
+quant_enterprise_strategy/src/build/
+quant_enterprise_strategy/src/bin/QuantStrategyClient
+quant_enterprise_strategy/src/bin/log/
+
+# Logs and temp
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Local databases
+database/quant.db
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.7z

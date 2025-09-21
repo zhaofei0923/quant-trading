@@ -1,3 +1,0 @@
-/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build/CMakeFiles/QuantStrategyClient.dir
-/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build/CMakeFiles/edit_cache.dir
-/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/build/CMakeFiles/rebuild_cache.dir

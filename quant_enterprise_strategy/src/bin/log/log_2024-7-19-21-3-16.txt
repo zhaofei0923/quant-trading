@@ -1,1 +1,0 @@
-[2024-07-19 21:03:16.713] [in] [info] Start CStrategy 
