@@ -2,25 +2,65 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug QuantStrategyClient (WSL)",
+      "name": "Launch Strategy (WSL)",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/quant_enterprise_strategy/src/bin/QuantStrategyClient",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}/quant_enterprise_strategy/src/bin",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "miDebuggerPath": "/usr/bin/gdb",
-      "setupCommands": [
+      "environment": [
         {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
+          "name": "LD_LIBRARY_PATH",
+          "value": "${workspaceFolder}/other_depend/ctp/linux64/lib:${workspaceFolder}/other_depend/sqlite/lib:${env:LD_LIBRARY_PATH}"
         }
+      ],
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb"
+    },
+    {
+      "name": "Launch Market (WSL)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/quant_enterprise_market/src/bin/QuantMarketServer",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/quant_enterprise_market/src/bin",
+      "environment": [
+        {
+          "name": "LD_LIBRARY_PATH",
+          "value": "${workspaceFolder}/other_depend/ctp/linux64/lib:${workspaceFolder}/other_depend/sqlite/lib:${env:LD_LIBRARY_PATH}"
+        }
+      ],
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb"
+    },
+    {
+      "name": "Launch Trade (WSL)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/quant_enterprise_trade/src/bin/QuantTradeServer",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/quant_enterprise_trade/src/bin",
+      "environment": [
+        {
+          "name": "LD_LIBRARY_PATH",
+          "value": "${workspaceFolder}/other_depend/ctp/linux64/lib:${workspaceFolder}/other_depend/sqlite/lib:${env:LD_LIBRARY_PATH}"
+        }
+      ],
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch All (Trade+Market+Strategy)",
+      "configurations": [
+        "Launch Trade (WSL)",
+        "Launch Market (WSL)",
+        "Launch Strategy (WSL)"
       ]
     }
   ]
 }
-

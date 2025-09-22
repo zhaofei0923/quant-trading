@@ -4,14 +4,22 @@
         "LogLevel": 0
     },
     "Ctp": {
-        "TradeIp": "218.202.237.33",
-        "TradePort": 10203,
-        "MarketIp": "218.202.237.33",
-        "MarketPort": 10213,
-        "#TradeIp": "180.168.146.187",
-        "#TradePort": 10130,
-        "#MarketIp": "180.168.146.187",
-        "#MarketPort": 10131,
+        "TradeIp": "182.254.243.31",
+        "TradePort": 30001,
+        "MarketIp": "182.254.243.31",
+        "MarketPort": 30011,
+        #"TradeIp": "182.254.243.31",
+        #"TradePort": 30002,
+        #"MarketIp": "182.254.243.31",
+        #"MarketPort": 30012,
+        #"TradeIp": "182.254.243.31",
+        #"TradePort": 30003,
+        #"MarketIp": "182.254.243.31",
+        #"MarketPort": 30013,
+        #"TradeIp": "182.254.243.31",
+        #"TradePort": 40001,
+        #"MarketIp": "182.254.243.31",
+        #"MarketPort": 40011,
         "BrokerId": "9999",
         "User": "191202",
         "Password": "zhaoFEI2024*",
@@ -21,5 +29,5 @@
     "TcpSvr": {
         "Port": 5882
     },
-    "database": "/home/kevinzhao/quant/quant_enterprise/database/quant.db"
+    "database": "/home/kevin0923/workspace/quant-trading/database/quant.db"
 }
