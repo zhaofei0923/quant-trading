@@ -25,6 +25,46 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release"
       }
+    },
+    {
+      "name": "trade-linux-debug",
+      "displayName": "Trade Debug (WSL)",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/quant_enterprise_trade/build",
+      "sourceDir": "${sourceDir}/quant_enterprise_trade/src",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "trade-linux-release",
+      "displayName": "Trade Release (WSL)",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/quant_enterprise_trade/build",
+      "sourceDir": "${sourceDir}/quant_enterprise_trade/src",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "market-linux-debug",
+      "displayName": "Market Debug (WSL)",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/quant_enterprise_market/build",
+      "sourceDir": "${sourceDir}/quant_enterprise_market/src",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "market-linux-release",
+      "displayName": "Market Release (WSL)",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/quant_enterprise_market/build",
+      "sourceDir": "${sourceDir}/quant_enterprise_market/src",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
     }
   ],
   "buildPresets": [
@@ -37,7 +77,26 @@
       "name": "build-release",
       "configurePreset": "linux-release",
       "jobs": 0
+    },
+    {
+      "name": "trade-build-debug",
+      "configurePreset": "trade-linux-debug",
+      "jobs": 0
+    },
+    {
+      "name": "trade-build-release",
+      "configurePreset": "trade-linux-release",
+      "jobs": 0
+    },
+    {
+      "name": "market-build-debug",
+      "configurePreset": "market-linux-debug",
+      "jobs": 0
+    },
+    {
+      "name": "market-build-release",
+      "configurePreset": "market-linux-release",
+      "jobs": 0
     }
   ]
 }
-

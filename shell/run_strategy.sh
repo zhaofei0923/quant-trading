@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 #删除共享内存
 #ipcrm -a
@@ -12,8 +12,10 @@ limtimeup="08:57:50"
 limtimenight="20:58:01"
 limtimenightup="20:58:50"
 
-#配置项
-ExeDir=/home/kevinzhao/quant/quant_enterprise/quant_enterprise_strategy/src/bin/
+#配置项（根据当前脚本位置自动定位）
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+ExeDir="$ROOT_DIR/quant_enterprise_strategy/src/bin/"
 ProcessName=QuantStrategyClient
 
 #获取进程id

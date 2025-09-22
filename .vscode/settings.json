@@ -1,12 +1,4 @@
 {
-    "cmake.ignoreCMakeListsMissing": true,
-    "editor.fontSize": 20,
-
-    // Point CMake Tools to the project's CMake under subfolder
-    "cmake.useCMakePresets": "always",
-    "cmake.configurePreset": "linux-debug",
-    "cmake.buildPreset": "build-debug",
-
-    // Better IntelliSense by reading CMake compile commands when present
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+  "cmake.useCMakePresets": "always"
 }
+

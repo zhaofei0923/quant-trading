@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 #删除共享内存
 #ipcrm -a
@@ -12,9 +12,14 @@ limtimeup="08:52:50"
 limtimenight="20:50:01"
 limtimenightup="20:50:50"
 
-#配置项
-ExeDir=/home/kevinzhao/quant/quant_enterprise/quant_enterprise_trade/src/bin/
+#配置项（根据当前脚本位置自动定位）
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+ExeDir="$ROOT_DIR/quant_enterprise_trade/src/bin/"
 ProcessName=QuantTradeServer
+
+# 运行期依赖库路径（CTP/SQLite）
+export LD_LIBRARY_PATH="$ROOT_DIR/other_depend/ctp/linux64/lib:$ROOT_DIR/other_depend/sqlite/lib:${LD_LIBRARY_PATH:-}"
 #获取进程id
 #Pid=`ps -ef | egrep ${ProcessName} |   egrep -v "grep|vi|tail" | sed -n 1p | awk '{print $2}'`
 #计算进程数量
